@@ -11,18 +11,14 @@ private let reuseIdentifier = "Cell"
 
 class MainCollectionViewController: UICollectionViewController {
     
-    
+    private var rickAndMorty: RickAndMortyData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        var chars: RickAndMortyData()
         
-        NetworkManager.shared.fetchRickAndMortiAPI() { rickAndMorty in
-            chars = rickAndMorty
-        }
+        fetchData()
         
-        print(chars)
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -32,7 +28,13 @@ class MainCollectionViewController: UICollectionViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
+    private func fetchData() {
+        NetworkManager.shared.fetchRickAndMortiAPI() { rickAndMorty in
+            self.rickAndMorty = rickAndMorty
+            self.collectionView.reloadData()
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -52,15 +54,14 @@ class MainCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return 9
+        return rickAndMorty?.results.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MainCollectionViewCell
-        
-        
-//        cell.imageView.image = json[indexPath.row]
+
+        let character = rickAndMorty?.results[indexPath.row]
+        cell.configure(with: character)
     
         return cell
     }
