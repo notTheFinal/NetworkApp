@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		A9A579272851E3A600A599DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A579262851E3A600A599DA /* AppDelegate.swift */; };
 		A9A579292851E3A600A599DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A579282851E3A600A599DA /* SceneDelegate.swift */; };
-		A9A5792B2851E3A600A599DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A5792A2851E3A600A599DA /* ViewController.swift */; };
 		A9A5792E2851E3A600A599DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9A5792C2851E3A600A599DA /* Main.storyboard */; };
 		A9A579302851E3A900A599DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A5792F2851E3A900A599DA /* Assets.xcassets */; };
 		A9A579332851E3A900A599DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9A579312851E3A900A599DA /* LaunchScreen.storyboard */; };
+		A9A5793B2851E53500A599DA /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A5793A2851E53500A599DA /* MainCollectionViewController.swift */; };
+		A9A5793D2851E60000A599DA /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A5793C2851E60000A599DA /* MainCollectionViewCell.swift */; };
+		A9A5793F2851E80600A599DA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A5793E2851E80600A599DA /* NetworkManager.swift */; };
+		A9A9846E285455B2007BBEC5 /* RickAndMortyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A9846D285455B2007BBEC5 /* RickAndMortyData.swift */; };
+		A9A9847228546262007BBEC5 /* RickAndMorty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A9847128546262007BBEC5 /* RickAndMorty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A9A579232851E3A600A599DA /* NetworkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A579262851E3A600A599DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9A579282851E3A600A599DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A9A5792A2851E3A600A599DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A9A5792D2851E3A600A599DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9A5792F2851E3A900A599DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9A579322851E3A900A599DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9A579342851E3A900A599DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9A5793A2851E53500A599DA /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
+		A9A5793C2851E60000A599DA /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		A9A5793E2851E80600A599DA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A9A9846D285455B2007BBEC5 /* RickAndMortyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyData.swift; sourceTree = "<group>"; };
+		A9A9847128546262007BBEC5 /* RickAndMorty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +66,15 @@
 			children = (
 				A9A579262851E3A600A599DA /* AppDelegate.swift */,
 				A9A579282851E3A600A599DA /* SceneDelegate.swift */,
-				A9A5792A2851E3A600A599DA /* ViewController.swift */,
 				A9A5792C2851E3A600A599DA /* Main.storyboard */,
 				A9A5792F2851E3A900A599DA /* Assets.xcassets */,
 				A9A579312851E3A900A599DA /* LaunchScreen.storyboard */,
 				A9A579342851E3A900A599DA /* Info.plist */,
+				A9A5793A2851E53500A599DA /* MainCollectionViewController.swift */,
+				A9A5793C2851E60000A599DA /* MainCollectionViewCell.swift */,
+				A9A5793E2851E80600A599DA /* NetworkManager.swift */,
+				A9A9846D285455B2007BBEC5 /* RickAndMortyData.swift */,
+				A9A9847128546262007BBEC5 /* RickAndMorty.swift */,
 			);
 			path = NetworkApp;
 			sourceTree = "<group>";
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9A5792B2851E3A600A599DA /* ViewController.swift in Sources */,
+				A9A9846E285455B2007BBEC5 /* RickAndMortyData.swift in Sources */,
+				A9A9847228546262007BBEC5 /* RickAndMorty.swift in Sources */,
 				A9A579272851E3A600A599DA /* AppDelegate.swift in Sources */,
+				A9A5793B2851E53500A599DA /* MainCollectionViewController.swift in Sources */,
+				A9A5793F2851E80600A599DA /* NetworkManager.swift in Sources */,
 				A9A579292851E3A600A599DA /* SceneDelegate.swift in Sources */,
+				A9A5793D2851E60000A599DA /* MainCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +322,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,7 +350,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
