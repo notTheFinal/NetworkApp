@@ -16,10 +16,11 @@
 		A9A5793D2851E60000A599DA /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A5793C2851E60000A599DA /* MainCollectionViewCell.swift */; };
 		A9A5793F2851E80600A599DA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A5793E2851E80600A599DA /* NetworkManager.swift */; };
 		A9A9846E285455B2007BBEC5 /* RickAndMortyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A9846D285455B2007BBEC5 /* RickAndMortyData.swift */; };
-		A9A9847228546262007BBEC5 /* RickAndMorty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A9847128546262007BBEC5 /* RickAndMorty.swift */; };
+		DA1CC6D6F77B79AEAADAF217 /* Pods_NetworkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF3D3213F210824C4912F0F /* Pods_NetworkApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35BCDCC71374B32298425DE0 /* Pods-NetworkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkApp.release.xcconfig"; path = "Target Support Files/Pods-NetworkApp/Pods-NetworkApp.release.xcconfig"; sourceTree = "<group>"; };
 		A9A579232851E3A600A599DA /* NetworkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A579262851E3A600A599DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9A579282851E3A600A599DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +32,8 @@
 		A9A5793C2851E60000A599DA /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		A9A5793E2851E80600A599DA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A9A9846D285455B2007BBEC5 /* RickAndMortyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyData.swift; sourceTree = "<group>"; };
-		A9A9847128546262007BBEC5 /* RickAndMorty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorty.swift; sourceTree = "<group>"; };
+		ACF3D3213F210824C4912F0F /* Pods_NetworkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D66EAE9DEA7C5163FBE95327 /* Pods-NetworkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkApp.debug.xcconfig"; path = "Target Support Files/Pods-NetworkApp/Pods-NetworkApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA1CC6D6F77B79AEAADAF217 /* Pods_NetworkApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4EC011A3A9FA52CD26F8D6B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACF3D3213F210824C4912F0F /* Pods_NetworkApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A9A5791A2851E3A600A599DA = {
 			isa = PBXGroup;
 			children = (
 				A9A579252851E3A600A599DA /* NetworkApp */,
 				A9A579242851E3A600A599DA /* Products */,
+				F39E4006FCF1F41A538656C0 /* Pods */,
+				4EC011A3A9FA52CD26F8D6B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +87,17 @@
 				A9A5793C2851E60000A599DA /* MainCollectionViewCell.swift */,
 				A9A5793E2851E80600A599DA /* NetworkManager.swift */,
 				A9A9846D285455B2007BBEC5 /* RickAndMortyData.swift */,
-				A9A9847128546262007BBEC5 /* RickAndMorty.swift */,
 			);
 			path = NetworkApp;
+			sourceTree = "<group>";
+		};
+		F39E4006FCF1F41A538656C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D66EAE9DEA7C5163FBE95327 /* Pods-NetworkApp.debug.xcconfig */,
+				35BCDCC71374B32298425DE0 /* Pods-NetworkApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9A579372851E3A900A599DA /* Build configuration list for PBXNativeTarget "NetworkApp" */;
 			buildPhases = (
+				1AEBFEF6E53C72F97C894437 /* [CP] Check Pods Manifest.lock */,
 				A9A5791F2851E3A600A599DA /* Sources */,
 				A9A579202851E3A600A599DA /* Frameworks */,
 				A9A579212851E3A600A599DA /* Resources */,
+				FCEF0A7CA8BDD87274D0E9FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,13 +168,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AEBFEF6E53C72F97C894437 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NetworkApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCEF0A7CA8BDD87274D0E9FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NetworkApp/Pods-NetworkApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NetworkApp/Pods-NetworkApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NetworkApp/Pods-NetworkApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A9A5791F2851E3A600A599DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A9A9846E285455B2007BBEC5 /* RickAndMortyData.swift in Sources */,
-				A9A9847228546262007BBEC5 /* RickAndMorty.swift in Sources */,
 				A9A579272851E3A600A599DA /* AppDelegate.swift in Sources */,
 				A9A5793B2851E53500A599DA /* MainCollectionViewController.swift in Sources */,
 				A9A5793F2851E80600A599DA /* NetworkManager.swift in Sources */,
@@ -300,6 +364,7 @@
 		};
 		A9A579382851E3A900A599DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D66EAE9DEA7C5163FBE95327 /* Pods-NetworkApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -328,6 +393,7 @@
 		};
 		A9A579392851E3A900A599DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35BCDCC71374B32298425DE0 /* Pods-NetworkApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

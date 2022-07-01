@@ -6,38 +6,35 @@
 //
 
 import Foundation
+import Alamofire
 
 class NetworkManager {
     static let shared = NetworkManager()
     
-    private init() {}
-    
-    func fetchRickAndMortiAPI(completion: @escaping(RickAndMortyData) -> Void) {
-        
-        guard let url = URL(
-            string: "https://rickandmortyapi.com/api/character/?page=\(Int.random(in: 1...42))")
-        else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
-            }
-            
-            do {
-                let rickAndMorty = try JSONDecoder().decode(RickAndMortyData.self, from: data)
-                DispatchQueue.main.async {
-                    completion(rickAndMorty)
-                }
-            } catch let error {
-                print(error)
-            }
-            
-        }.resume()
+    enum NetworkError: Error {
+        case invalidURL
+        case noData
+        case decodingError
     }
     
+    private init() {}
     
-    
+    func fetchRickAndMortiAPI(completion: @escaping(Swift.Result<[Result], NetworkError>) -> Void) {
+        var rAndM: [Result] = []
+        AF.request("https://rickandmortyapi.com/api/character/?page=\(Int.random(in: 1...42))")
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let result):
+                    rAndM = Result.getResults(from: result)
+                    DispatchQueue.main.async {
+                        completion(.success(rAndM))
+                    }
+                case .failure(_):
+                    completion(.failure(.decodingError))
+                }
+            }
+    }
 }
 
 class ImageManager {
