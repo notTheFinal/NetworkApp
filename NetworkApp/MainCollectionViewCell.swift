@@ -9,6 +9,7 @@ import UIKit
 class MainCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var descriptionLanel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     func configure(with character: Result?) {
         DispatchQueue.global().async {
@@ -16,6 +17,7 @@ class MainCollectionViewCell: UICollectionViewCell {
             guard let imageUrl = URL(string: stringUrl) else { return }
             guard let imageData = try? Data(contentsOf: imageUrl) else { return }
             DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
                 self.imageView.image = UIImage(data: imageData)
                 self.descriptionLanel.text = character?.description
             }
